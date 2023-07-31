@@ -43,6 +43,14 @@ public class EditActivity extends AppCompatActivity {
             editSpin.setSelection(0);
         } else if (data.getRating().equals("M18")) {
             editSpin.setSelection(1);
+        } else if (data.getRating().equals("NC16")) {
+            editSpin.setSelection(2);
+        } else if (data.getRating().equals("PG")) {
+            editSpin.setSelection(3);
+        } else if (data.getRating().equals("PG13")) {
+            editSpin.setSelection(4);
+        } else if (data.getRating().equals("R21")) {
+            editSpin.setSelection(5);
         }
 
     }
