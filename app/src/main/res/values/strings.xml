@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">A Night at the Movies</string>
+    <string-array name="ratingSpin">
+        <item >G</item>
+        <item >M18</item>
+        <item >NC16</item>
+        <item >PG</item>
+        <item >PG13</item>
+        <item >R21</item>
+    </string-array>
+</resources>
