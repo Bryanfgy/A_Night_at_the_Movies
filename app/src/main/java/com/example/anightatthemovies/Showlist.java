@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 public class Showlist extends AppCompatActivity {
-    Button btnPg13;
+    Button btnPg13 ,btnRtn;
     ListView lv;
     ArrayList<Movies> al;
     CustomAdapter aa;
@@ -26,6 +26,7 @@ public class Showlist extends AppCompatActivity {
 
         DatabaseHelper db = new DatabaseHelper(Showlist.this);
         btnPg13 = findViewById(R.id.btnPg13);
+        btnRtn = findViewById(R.id.btnreturn);
         lv = findViewById(R.id.MovieListview);
         al = new ArrayList<>();
         aa = new CustomAdapter(this, R.layout.customlist, al);
@@ -57,6 +58,14 @@ public class Showlist extends AppCompatActivity {
                 al.clear();
                 al.addAll(dbh.pgMovies("PG13"));
                 aa.notifyDataSetChanged();
+            }
+        });
+
+        btnRtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Showlist.this, MainActivity.class);
+                startActivity(i);
             }
         });
 

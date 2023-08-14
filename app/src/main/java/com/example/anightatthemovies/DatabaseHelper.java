@@ -46,7 +46,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
 
     }
-    public void insertTask(String title,String year,String genre,String ratings){
+    public void insertTask(String title,String genre,String year,String ratings){
 
         // Get an instance of the database for writing
         SQLiteDatabase db = this.getWritableDatabase();

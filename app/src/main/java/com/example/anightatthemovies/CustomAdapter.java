@@ -31,14 +31,15 @@ public class CustomAdapter extends ArrayAdapter {
         View rowView = inflater.inflate(layout_id, parent, false);
 
         TextView tvName = rowView.findViewById(R.id.tvTitle);
+
         TextView tvCode = rowView.findViewById(R.id.tvGenre);
-        TextView tvNum = rowView.findViewById(R.id.tvYear);
         ImageView ivGender = rowView.findViewById(R.id.imageRating);
+        TextView tvYear = rowView.findViewById(R.id.tvYear);
 
         Movies currentItem = contactList.get(position);
         tvName.setText(currentItem.getTitle());
         tvCode.setText( currentItem.getGenre());
-        tvNum.setText(currentItem.getYear() + "");
+        tvYear.setText(currentItem.getYear() + "");
         if (currentItem.getRating().equals("G")) {
             ivGender.setImageResource(R.drawable.rating_g);
         } else if(currentItem.getRating().equals("M18")){

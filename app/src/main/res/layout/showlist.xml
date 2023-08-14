@@ -10,6 +10,12 @@
         android:layout_height="wrap_content"
         android:text="Show all PG-13 Movies" />
 
+    <Button
+        android:id="@+id/btnreturn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Return" />
+
     <ListView
         android:id="@+id/MovieListview"
         android:layout_width="match_parent"
