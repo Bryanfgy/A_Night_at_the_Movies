@@ -1,6 +1,8 @@
 package com.example.anightatthemovies;
 
-public class Movies {
+import java.io.Serializable;
+
+public class Movies implements Serializable {
     private int id;
     private String title;
     private String genre;

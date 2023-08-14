@@ -13,10 +13,10 @@
         android:theme="@style/Theme.ANightAtTheMovies"
         tools:targetApi="31">
         <activity
-            android:name=".Showlist"
+            android:name=".EditActivity"
             android:exported="false"/>
         <activity
-            android:name=".EditActivity"
+            android:name=".Showlist"
             android:exported="false"/>
         <activity
             android:name=".MainActivity"

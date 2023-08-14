@@ -45,7 +45,7 @@ public class Showlist extends AppCompatActivity {
                 Movies data = al.get(position);
                 Intent i = new Intent(Showlist.this,
                         EditActivity.class);
-                i.putExtra("data", String.valueOf(data));
+                i.putExtra("data", data);
                 startActivity(i);
             }
         });
