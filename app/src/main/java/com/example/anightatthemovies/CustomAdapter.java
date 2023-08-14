@@ -37,7 +37,7 @@ public class CustomAdapter extends ArrayAdapter {
 
         Movies currentItem = contactList.get(position);
         tvName.setText(currentItem.getTitle());
-        tvCode.setText("+" + currentItem.getGenre());
+        tvCode.setText( currentItem.getGenre());
         tvNum.setText(currentItem.getYear() + "");
         if (currentItem.getRating().equals("G")) {
             ivGender.setImageResource(R.drawable.rating_g);

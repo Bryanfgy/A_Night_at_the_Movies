@@ -64,14 +64,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Insert" />
+            android:text="UPDATE" />
 
         <Button
             android:id="@+id/btnDelete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Show List" />
+            android:text="DELETE" />
 
     </LinearLayout>
 
@@ -84,7 +84,7 @@
             android:id="@+id/Return"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Cancel" />
+            android:text="RETURN" />
 
     </LinearLayout>
 

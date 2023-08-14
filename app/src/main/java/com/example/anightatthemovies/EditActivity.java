@@ -2,6 +2,8 @@ package com.example.anightatthemovies;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -53,5 +55,50 @@ public class EditActivity extends AppCompatActivity {
             editSpin.setSelection(5);
         }
 
+        btnUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String rating = "";
+                if(data.getRating().equals("G")){
+                    spinStore.setText("G");
+                } else if (data.getRating().equals("M18")) {
+                    spinStore.setText("M18");
+                } else if (data.getRating().equals("NC16")) {
+                    spinStore.setText("NC16");
+                } else if (data.getRating().equals("PG")) {
+                    spinStore.setText("PG");
+                } else if (data.getRating().equals("PG13")) {
+                    spinStore.setText("PG13");
+                } else if (data.getRating().equals("R21")) {
+                    spinStore.setText("R21");
+                }
+                DatabaseHelper dbh = new DatabaseHelper(EditActivity.this);
+                data.setTitle(editTitle.getText().toString());
+                data.setYear(editYear.getText().toString());
+                data.setGenre(editGenre.getText().toString());
+                data.setRating(spinStore.getText().toString());
+                dbh.updateMovies(data);
+                dbh.close();
+                finish();
+
+            }
+        });
+
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatabaseHelper dbh = new DatabaseHelper(EditActivity.this);
+                dbh.deleteMovies(data.getId());
+                finish();
+            }
+        });
+
+        Return.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(EditActivity.this, Showlist.class);
+                startActivity(i);
+            }
+        });
     }
 }
